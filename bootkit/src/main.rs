@@ -30,7 +30,7 @@ fn panic_handler(info: &core::panic::PanicInfo) -> ! {
             location.line(),
             location.column()
         );
-        if let Some(message) = info.message() {
+        if let message = info.message() {
             log::error!("[-] {}", message);
         }
     }
